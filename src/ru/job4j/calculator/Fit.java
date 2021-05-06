@@ -14,10 +14,10 @@ public class Fit {
     public static void main(String[] args) {
         short heightMan = 175;
         double man = Fit.manWeight(heightMan);
-        System.out.println("Man "+ heightMan + " is " + man);
+        System.out.println("Man " + heightMan + " is " + man);
 
         short heightWoman = 165;
         double woman = Fit.womanWeight(heightWoman);
-        System.out.println("Woman " + heightWoman +" is " + woman);
+        System.out.println("Woman " + heightWoman + " is " + woman);
     }
 }
