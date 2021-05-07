@@ -28,5 +28,6 @@ public class Converter {
         int dollar = Converter.rubleToDollar(5210);
         System.out.println("140 rubles are " + euro + " euro.");
         System.out.println("5210 rubles are " + dollar + " dollar.");
+
     }
 }
