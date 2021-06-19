@@ -4,14 +4,9 @@ import java.util.Arrays;
 
 public class SwitchArray {
     public static int[] swap(int[] array, int source, int dest) {
-//        for (int i = source; i < dest / 2; i++) {
-//         int temp = array[i];
-//         array[i] = array[dest - 1 - i];
-//         array[dest - 1 - i] = temp;
-//      } // для того чтобы сделать реверс элементов
-        int temp = array[0];
-        array[0] = array[3];
-        array[3] = temp;
+        int temp = array[source];
+        array[source] = array[dest];
+        array[dest] = temp;
         return array;
     }
 
