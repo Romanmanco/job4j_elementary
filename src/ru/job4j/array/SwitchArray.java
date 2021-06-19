@@ -1,6 +1,20 @@
 package ru.job4j.array;
 
+import java.util.Arrays;
+
 public class SwitchArray {
+    public static int[] swap(int[] array, int source, int dest) {
+//        for (int i = source; i < dest / 2; i++) {
+//         int temp = array[i];
+//         array[i] = array[dest - 1 - i];
+//         array[dest - 1 - i] = temp;
+//      } // для того чтобы сделать реверс элементов
+        int temp = array[0];
+        array[0] = array[3];
+        array[3] = temp;
+        return array;
+    }
+
     public static int[] swapBorder(int[] array) {
         int temp = array[0];
         array[0] = array[array.length - 1];
