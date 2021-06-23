@@ -14,7 +14,3 @@ public class EndsWith {
         return result;
     }
 }
-//if (word[4] != post[1] || word[3] != post[0]) {
-////                result = false;
-////                break;
-////            }
