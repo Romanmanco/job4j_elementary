@@ -1,10 +1,8 @@
 package ru.job4j.array;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
-@Ignore
 public class MatrixCheckTest {
     @Test
     public void whenDiagonalFullX() {
