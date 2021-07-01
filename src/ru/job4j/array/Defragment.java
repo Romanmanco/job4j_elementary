@@ -7,14 +7,15 @@ public class Defragment {
         for (int index = 0; index < array.length; index++) {
             if (array[index] == null) {
                 int point = index;
-                for (int i = 0; i < array.length; i++) {
+                for (int i = point + 1; i < array.length; i++) {
                     if (array[i] != null) {
                         int notNullIndex = i;
                         i = point;
                         point = notNullIndex;
+                        swap(array, index, notNullIndex);
+                        break;
                     }
                 }
-                swap(array, index, notNullIndex);
             }
             System.out.print(array[index] + " ");
         }
