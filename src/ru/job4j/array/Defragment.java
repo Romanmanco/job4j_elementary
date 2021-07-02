@@ -9,10 +9,7 @@ public class Defragment {
                 int point = index;
                 for (int i = point + 1; i < array.length; i++) {
                     if (array[i] != null) {
-                        int notNullIndex = i;
-                        i = point;
-                        point = notNullIndex;
-                        swap(array, index, notNullIndex);
+                        swap(array, index, i);
                         break;
                     }
                 }
