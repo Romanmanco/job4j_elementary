@@ -26,6 +26,5 @@ public class Defragment {
         for (int index = 0; index < compressed.length; index++) {
             System.out.print(compressed[index] + " ");
         }
-
     }
 }

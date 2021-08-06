@@ -3,7 +3,7 @@ package ru.job4j.loop;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CheckPrimeNumberTest {
+public class CheckDataPrimeNumberTest {
     @Test
     public void when5() {
         int number = 5;
