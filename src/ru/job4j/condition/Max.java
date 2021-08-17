@@ -6,8 +6,15 @@ public class Max {
         return Math.max(first, second);
     }
 
+    public static int max(int first, int second, int third) {
+        return Math.max(
+                first, max(second, third)
+        );
+    }
+
     public static int max(int first, int second, int third, int fourth) {
-        return Math.max(max(first, second), max(third, fourth)
+        return Math.max(
+                max(first, second), max(third, fourth)
         );
     }
 
