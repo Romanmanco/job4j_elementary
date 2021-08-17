@@ -3,31 +3,39 @@ package ru.job4j.condition;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static ru.job4j.condition.Max.max;
+
 public class MaxTest {
     @Test
-    public void whenMax1To2Then2() {
-        int left = 1;
-        int right = 2;
-        int result = Max.max(left, right);
-        int expected = 2;
+    public void whenMaxFourth() {
+        int first = 1;
+        int second = 2;
+        int third = 3;
+        int fourth = 4;
+        int result = Math.max(max(first, second), max(third, fourth));
+        int expected = 4;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void whenMax223To2Then223() {
-        int left = 223;
-        int right = 2;
-        int result = Max.max(left, right);
-        int expected = 223;
+    public void whenMaxFirst() {
+        int first = 456456;
+        int second = 565;
+        int third = 675;
+        int fourth = 8797;
+        int result = Math.max(max(first, second), max(third, fourth));
+        int expected = 456456;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void whenMax14To14Then2() {
-        int left = 14;
-        int right = 14;
-        int result = Max.max(left, right);
-        int expected = 14;
+    public void whenMaxSecond() {
+        int first = 8797;
+        int second = 9999999;
+        int third = 5564;
+        int fourth = 13;
+        int result = Math.max(max(first, second), max(third, fourth));
+        int expected = 9999999;
         Assert.assertEquals(result, expected);
     }
 }
