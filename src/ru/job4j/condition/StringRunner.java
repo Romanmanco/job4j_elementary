@@ -5,7 +5,7 @@ public class StringRunner {
         String idea = "I like Java!";
         System.out.println(idea);
         idea += " But I am a newbie. ";
-        int year = 2022;
+        int year = 2023;
         idea += year;
         System.out.println(idea);
     }
