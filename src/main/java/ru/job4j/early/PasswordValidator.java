@@ -32,13 +32,11 @@ public class PasswordValidator {
                     "Password can't be null"
             );
         }
-
         if (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException(
                     "Password should be length [8, 32]"
             );
         }
-
         if (Arrays.stream(FORBIDDEN).anyMatch(password.toLowerCase(Locale.ROOT)::contains)) {
             throw new IllegalArgumentException(
                     "Password shouldn't contain substrings: qwerty, 12345, password, admin, user"
@@ -53,17 +51,17 @@ public class PasswordValidator {
             if (Character.isUpperCase(symbol)) {
                 hasUpCase = true;
             }
-
             if (Character.isLowerCase(symbol)) {
                 hasLowCase = true;
             }
-
             if (Character.isDigit(symbol)) {
                 hasDigit = true;
             }
-
             if (!Character.isLetterOrDigit(symbol)) {
                 hasSpecial = true;
+            }
+            if (hasUpCase && hasLowCase && hasDigit && hasSpecial) {
+                break;
             }
         }
         if (!hasUpCase) {
@@ -71,25 +69,21 @@ public class PasswordValidator {
                     "Password should contain at least one uppercase letter"
             );
         }
-
         if (!hasLowCase) {
             throw new IllegalArgumentException(
                     "Password should contain at least one lowercase letter"
             );
         }
-
         if (!hasDigit) {
             throw new IllegalArgumentException(
                     "Password should contain at least one figure"
             );
         }
-
         if (!hasSpecial) {
             throw new IllegalArgumentException(
                     "Password should contain at least one special symbol"
             );
         }
-
         return password;
     }
 }
